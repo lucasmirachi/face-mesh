@@ -21,6 +21,7 @@ while True:
     if results.multi_face_landmarks:
         for faceLandmarks in results.multi_face_landmarks:
             mpDraw.draw_landmarks(img, faceLandmarks, mpFaceMesh.FACEMESH_TESSELATION, drawSpec, drawSpec)
+            mpDraw.draw_landmarks(img, faceLandmarks, mpFaceMesh.FACEMESH_CONTOURS, drawSpec, drawSpec)
 
             #To get the values/informations of each landmark
             for id,lm in enumerate(faceLandmarks.landmark):
